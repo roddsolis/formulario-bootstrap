@@ -1,6 +1,6 @@
 *{
     text-rendering: geometricPrecision;
-    shape-rendering: geometricPrecision;
+    shape-rendering:geometricPrecision;
 }
 
 body{
@@ -8,4 +8,8 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+.card{
+    scale: 85%;
 }
