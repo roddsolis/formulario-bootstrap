@@ -12,112 +12,334 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-light d-flex align-items-center">
+<body class="bg-light d-flex align-items-center m-4">
+  <div class="container bg-white p-5 rounded-4 shadow-sm">
+    <!-- fila titulo -->
 
-  <div class="container bg-white p-5 rounded-4 shadowp-3 mb-5 bg-body rounded">
-
-    <div class="row">
-      <div class="col-12 ps-0">
-        <h4>Ingresa los datos de pago</h4>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12 ps-0">
-        <div class="alert alert-warning mb-0" role="alert">
-          *Todos los campos son necesarios
+    <div class="row no-gutters">
+      <div class="col-12">
+        <div class="w-100">
+          <!-- aqui va el titulo -->
+          <h4>Ingresa los datos de pago</h4>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-12 ps-0">
+    <!-- fila 2 warning -->
 
-        <div class="form-floating mb-0">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Nombres">
-          <label for="floatingInput">Nombres</label>
-        </div>
-
-      </div>
-      <div class="col-xl-6 col-lg-6 col-md-12 ps-0">
-
-        <div class="form-floating mb-0">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Nombres">
-          <label for="floatingInput">Apellidos</label>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xl-4 col-lg-4 col-md-12 ps-0 mb-2">
-        <div class="form-floating mb-0">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Nombres">
-          <label for="floatingInput">Número de tarjeta</label>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-12 ps-0 mb-2">
-        <div class="form-floating mb-0">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Nombres">
-          <label for="floatingInput">CCV</label>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-12 ps-0 mb-2">
-        <div class="form-floating mb-0">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Nombres">
-          <label for="floatingInput">Monto</label>
+    <div class="row no-gutters">
+      <div class="col-12">
+        <div class="w-100">
+          <!-- Aqui va el componente de warning -->
+          <div class="alert alert-warning mb-0" role="alert">
+            *Todos los campos son necesarios
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xl-4 col-lg-4 col-md-12 ps-0 mb-2">
-        <div class="form-floating">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-            <option selected>Seleccionar</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-          <label for="floatingSelect">Cuidad</label>
+    <!-- inputs 2 columnas -->
+
+    <div class="row no-gutters">
+      <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input nombre -->
+          <div class="form-floating mb-0">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombres" />
+            <label for="floatingInput">Nombres</label>
+          </div>
         </div>
       </div>
-      <div class="col-xl-4 col-lg-4 col-md-12 ps-0 mb-2">
-        <div class="form-floating">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-            <option selected>Seleccionar</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-          <label for="floatingSelect">Comuna</label>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-4 col-md-12 ps-0 mb-2">
-        <div class="form-floating mb-0">
-          <input type="text" class="form-control" id="floatingInput" placeholder="Nombres">
-          <label for="floatingInput">Código postal</label>
+      <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input apellido -->
+          <div class="form-floating mb-0">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombres" />
+            <label for="floatingInput">Apellidos</label>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="row d-flex justify-content-between">
-      <div class="col-xl-6 col-lg-6 col-md-12 bg-warning">
-        col 1
+    <!-- inputs 3 columnas -->
+
+    <div class="row no-gutters">
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input numero de tarjeta -->
+          <div class="form-floating mb-0">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombres" />
+            <label for="floatingInput">Número de tarjeta</label>
+          </div>
+        </div>
       </div>
-      <div class="col-xl-6 col-lg-6 col-md-12 bg-success">
-        col 2
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input CVC -->
+          <div class="form-floating mb-0">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombres" />
+            <label for="floatingInput">CCV</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input monto -->
+          <div class="form-floating mb-0">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombres" />
+            <label for="floatingInput">Monto</label>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-12 d-flex justify-content-end ps-0 mt-2">
-        <button class="btn btn-outline-danger me-2 col-2" type="button">Cancelar</button>
-        <button class="btn btn-primary col-2" type="button">Pagar</button>
+    <!-- inputs 3 columnas -->
+
+    <div class="row no-gutters">
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input cuidad -->
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Seleccionar</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="floatingSelect">Cuidad</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input comuna-->
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Seleccionar</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="floatingSelect">Comuna</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input codigo postal -->
+          <div class="form-floating mb-0">
+            <input type="number" class="form-control" id="floatingInput" placeholder="Nombres" />
+            <label for="floatingInput">Código postal</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- inputs 2 columnas -->
+
+    <div class="row no-gutters">
+      <div class="col-xl-6 col-lg-6 col-md-12 d-flex flex-column">
+        <div class="d-flex flex-column align-items-start align-items-center h-100 border border-1 border-gray rounded-2 p-3">
+          <p class="mb-2 lh-1 text-secondary ">Selecciona un tipo de tarjeta</p>
+          <div class="d-flex justify-content-between">
+            <!-- aca va la tarjeta 1 y el checkbox 1 -->
+            <div class="pe-3 form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                checked />
+              <label class="form-check-label pe-3" for="exampleRadios1">
+                <!-- aca va la tarjeta 1 -->
+                <svg id="card"xmlns="http://www.w3.org/2000/svg" width="59" height="42" viewBox="0059 42" fill="none">
+                  <g clip-path="url(#clip0_316_160)">
+                    <rect x="1" y="1.70312" width="56.2814" height="38.5885" rx="3.21608" fill="white" />
+                    <path d="M25.0788 27.5617H21.8965L23.8869 15.2559H27.069L25.0788 27.5617Z" fill="#00579F" />
+                    <path
+                      d="M36.6138 15.5566C35.9862 15.3076 34.9906 15.0327 33.7596 15.0327C30.617 15.0327 28.404 16.7083 28.3904 19.1039C28.3643 20.8714 29.9749 21.8531 31.1794 22.4424C32.4106 23.0447 32.8291 23.4377 32.8291 23.9745C32.8166 24.7989 31.8342 25.1789 30.918 25.1789C29.6475 25.1789 28.9668 24.983 27.9322 24.5243L27.5132 24.3277L27.0679 27.0901C27.8142 27.4301 29.1893 27.7318 30.617 27.7451C33.9561 27.7451 36.1299 26.0954 36.1556 23.5425C36.1684 22.1416 35.3179 21.0682 33.4845 20.1911C32.3714 19.628 31.6898 19.2484 31.6898 18.6722C31.7029 18.1485 32.2663 17.6121 33.5227 17.6121C34.5573 17.5858 35.3174 17.8344 35.8932 18.0833L36.1811 18.2139L36.6138 15.5566Z"
+                      fill="#00579F" />
+                    <path
+                      d="M40.8449 23.2022C41.107 22.4952 42.1154 19.7591 42.1154 19.7591C42.1022 19.7854 42.377 19.0391 42.5341 18.581L42.7565 19.6413C42.7565 19.6413 43.3591 22.5869 43.49 23.2022C42.9926 23.2022 41.4735 23.2022 40.8449 23.2022ZM44.773 15.2559H42.3115C41.5525 15.2559 40.9758 15.4782 40.6483 16.2769L35.9214 27.5616H39.2605C39.2605 27.5616 39.8102 26.0427 39.9283 25.7156C40.2946 25.7156 43.5429 25.7156 44.0141 25.7156C44.1055 26.1476 44.3938 27.5616 44.3938 27.5616H47.3403L44.773 15.2559V15.2559Z"
+                      fill="#00579F" />
+                    <path
+                      d="M19.2386 15.2559L16.1221 23.6473L15.7815 21.9454C15.2054 19.9817 13.3984 17.8481 11.3818 16.7872L14.2364 27.5487H17.6016L22.6036 15.2559H19.2386V15.2559Z"
+                      fill="#00579F" />
+                    <path
+                      d="M13.228 15.2559H8.10804L8.05566 15.5045C12.0496 16.5258 14.6946 18.9877 15.7814 21.9467L14.6684 16.2904C14.4851 15.5044 13.922 15.2818 13.228 15.2559Z"
+                      fill="#FAA61A" />
+                  </g>
+                  <rect x="0.59799" y="1.30111" width="57.0854" height="39.3925" rx="5.22613" stroke="#E0E0E0"
+                    stroke-width="0.80402" />
+                  <defs>
+                    <clipPath id="clip0_316_160">
+                      <rect x="1" y="1.70312" width="56.2814" height="38.5885" rx="4.82412" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </label>
+            </div>
+            <!-- aca va la tarjeta 2 y el checkbox 2 -->
+            <div class="pe-3 form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                checked />
+              <label class="form-check-label pe-3" for="exampleRadios1">
+                <!-- aca va la tarjeta 2 -->
+                <svg id="card"xmlns="http://www.w3.org/2000/svg" width="59" height="42" viewBox="0059 42" fill="none">
+                  <g clip-path="url(#clip0_316_189)">
+                    <rect x="1.28125" y="1.70312" width="56.2814" height="38.5885" rx="3.21608" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M29.8238 29.2889C27.9077 30.9421 25.4222 31.9402 22.7063 31.9402C16.6461 31.9402 11.7334 26.971 11.7334 20.8412C11.7334 14.7114 16.6461 9.74219 22.7063 9.74219C25.4223 9.74219 27.9079 10.7403 29.824 12.3937C31.7401 10.7405 34.2256 9.74241 36.9415 9.74241C43.0017 9.74241 47.9144 14.7116 47.9144 20.8414C47.9144 26.9712 43.0017 31.9404 36.9415 31.9404C34.2254 31.9404 31.7399 30.9423 29.8238 29.2889Z"
+                      fill="#ED0006" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M29.8237 29.2887C32.183 27.253 33.679 24.2238 33.679 20.8412C33.679 17.4586 32.183 14.4294 29.8237 12.3936C31.7398 10.7403 34.2254 9.74219 36.9414 9.74219C43.0015 9.74219 47.9142 14.7114 47.9142 20.8412C47.9142 26.971 43.0015 31.9402 36.9414 31.9402C34.2254 31.9402 31.7398 30.9421 29.8237 29.2887Z"
+                      fill="#F9A000" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M29.824 29.2891C32.1833 27.2534 33.6793 24.2242 33.6793 20.8416C33.6793 17.459 32.1833 14.4298 29.824 12.394C27.4648 14.4298 25.9688 17.459 25.9688 20.8416C25.9688 24.2242 27.4648 27.2534 29.824 29.2891Z"
+                      fill="#FF5E00" />
+                  </g>
+                  <rect x="0.87924" y="1.30111" width="57.0854" height="39.3925" rx="5.22613" stroke="#E0E0E0"
+                    stroke-width="0.80402" />
+                  <defs>
+                    <clipPath id="clip0_316_189">
+                      <rect x="1.28125" y="1.70312" width="56.2814" height="38.5885" rx="4.82412" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </label>
+            </div>
+            <!-- aca va la tarjeta 3 y el checkbox 3 -->
+            <div class="pe-3 form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                checked />
+              <label class="form-check-label pe-3" for="exampleRadios1">
+                <!-- aca va la tarjeta 3 -->
+                <svg id="card"xmlns="http://www.w3.org/2000/svg" width="59" height="42" viewBox="0059 42" fill="none">
+                  <g clip-path="url(#clip0_316_153)">
+                    <rect x="1.5625" y="1.70312" width="56.2814" height="38.5885" rx="3.21608" fill="white" />
+                    <path
+                      d="M32.1878 33.0562C38.4551 33.0865 44.1757 27.8986 44.1757 21.5875C44.1757 14.6865 38.4551 9.91588 32.1878 9.91846H26.7938C20.4517 9.91588 15.231 14.6878 15.231 21.5875C15.231 27.8998 20.4517 33.0865 26.7938 33.0562H32.1878Z"
+                      fill="#0079BE" />
+                    <path
+                      d="M26.8194 10.8745C21.0235 10.8764 16.3276 15.6162 16.3257 21.4661C16.3276 27.3155 21.0235 32.0552 26.8194 32.0571C32.6159 32.0552 37.3137 27.3155 37.3143 21.4661C37.3137 15.6162 32.6165 10.8764 26.8194 10.8745ZM20.1681 21.4661C20.1669 20.1136 20.5738 18.7921 21.3356 17.6744C22.0975 16.5568 23.1788 15.6949 24.4383 15.2015V27.7302C23.1787 27.2371 22.0972 26.3754 21.3354 25.2578C20.5735 24.1402 20.1667 22.8187 20.1681 21.4661V21.4661ZM29.1998 27.7328V15.2008C30.4602 15.6935 31.5425 16.5554 32.3049 17.6734C33.0673 18.7914 33.4742 20.1136 33.4725 21.4668C33.474 22.8199 33.0669 24.142 32.3045 25.26C31.5422 26.3779 30.4601 27.2398 29.1998 27.7328V27.7328Z"
+                      fill="white" />
+                    <path
+                      d="M32.1878 33.0562C38.4551 33.0865 44.1757 27.8986 44.1757 21.5875C44.1757 14.6865 38.4551 9.91588 32.1878 9.91846H26.7938C20.4517 9.91588 15.231 14.6878 15.231 21.5875C15.231 27.8998 20.4517 33.0865 26.7938 33.0562H32.1878Z"
+                      fill="#0079BE" />
+                    <path
+                      d="M26.8194 10.8745C21.0235 10.8764 16.3276 15.6162 16.3257 21.4661C16.3276 27.3155 21.0235 32.0552 26.8194 32.0571C32.6159 32.0552 37.3137 27.3155 37.3143 21.4661C37.3137 15.6162 32.6165 10.8764 26.8194 10.8745ZM20.1681 21.4661C20.1669 20.1136 20.5738 18.7921 21.3356 17.6744C22.0975 16.5568 23.1788 15.6949 24.4383 15.2015V27.7302C23.1787 27.2371 22.0972 26.3754 21.3354 25.2578C20.5735 24.1402 20.1667 22.8187 20.1681 21.4661V21.4661ZM29.1998 27.7328V15.2008C30.4602 15.6935 31.5425 16.5554 32.3049 17.6734C33.0673 18.7914 33.4742 20.1136 33.4725 21.4668C33.474 22.8199 33.0669 24.142 32.3045 25.26C31.5422 26.3779 30.4601 27.2398 29.1998 27.7328V27.7328Z"
+                      fill="white" />
+                  </g>
+                  <rect x="1.16049" y="1.30111" width="57.0854" height="39.3925" rx="5.22613" stroke="#E0E0E0"
+                    stroke-width="0.80402" />
+                  <defs>
+                    <clipPath id="clip0_316_153">
+                      <rect x="1.5625" y="1.70312" width="56.2814" height="38.5885" rx="4.82412" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </label>
+            </div>
+            <!-- aca va la tarjeta 4 y el checkbox 4 -->
+            <div class="form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                checked />
+              <label class="form-check-label pe-3" for="exampleRadios1"> 
+                <!-- aca va la tarjeta 4 -->
+                <svg id="card"xmlns="http://www.w3.org/2000/svg" width="58" height="42" viewBox="0058 42" fill="none">
+                  <g clip-path="url(#clip0_316_167)">
+                    <mask id="mask0_316_167" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="58"
+                      height="40">
+                      <rect x="0.84375" y="1.70312" width="56.2814" height="38.5885" fill="#016FD0" />
+                    </mask>
+                    <g mask="url(#mask0_316_167)">
+                      <rect x="0.84375" y="1.70312" width="56.2814" height="38.5885" rx="3.21608" fill="white" />
+                      <path
+                        d="M11.791 31.2239V22.3706H21.1661L22.1719 23.6817L23.211 22.3706H57.2401V30.6133C57.2401 30.6133 56.3502 31.215 55.321 31.2239H36.4784L35.3443 29.8283V31.2239H31.6281V28.8416C31.6281 28.8416 31.1205 29.1741 30.023 29.1741H28.7581V31.2239H23.1315L22.1271 29.8847L21.1073 31.2239H11.791Z"
+                        fill="#016FD0" />
+                      <path
+                        d="M0.84375 15.6982L2.95786 10.77H6.614L7.81378 13.5306V10.77H12.3587L13.0729 12.7653L13.7653 10.77H34.1673V11.7731C34.1673 11.7731 35.2398 10.77 37.0024 10.77L43.6221 10.7932L44.8012 13.5176V10.77H48.6046L49.6514 12.335V10.77H53.4897V19.6233H49.6514L48.6482 18.0532V19.6233H43.0601L42.4982 18.2277H40.9959L40.4431 19.6233H36.6535C35.1368 19.6233 34.1673 18.6407 34.1673 18.6407V19.6233H28.4534L27.3194 18.2277V19.6233H6.07236L5.51079 18.2277H4.01332L3.45572 19.6233H0.84375V15.6982Z"
+                        fill="#016FD0" />
+                      <path
+                        d="M3.7045 11.8613L0.853027 18.4911H2.70948L3.23562 17.1635H6.29427L6.81768 18.4911H8.71503L5.86628 11.8613H3.7045ZM4.75949 13.4043L5.69181 15.7242H3.82445L4.75949 13.4043V13.4043Z"
+                        fill="white" />
+                      <path
+                        d="M8.91113 18.4897V11.8599L11.5493 11.8697L13.0837 16.1441L14.5814 11.8599H17.1984V18.4897H15.5409V13.6046L13.784 18.4897H12.3304L10.5686 13.6046V18.4897H8.91113Z"
+                        fill="white" />
+                      <path
+                        d="M18.3345 18.4897V11.8599H23.7431V13.3429H20.0094V14.4769H23.6558V15.8727H20.0094V17.0504H23.7431V18.4897H18.3345Z"
+                        fill="white" />
+                      <path
+                        d="M24.7007 11.8613V18.4912H26.3582V16.1359H27.056L29.0434 18.4912H31.0689L28.888 16.0486C29.783 15.9731 30.7063 15.2049 30.7063 14.0122C30.7063 12.6171 29.6112 11.8613 28.3891 11.8613H24.7007V11.8613ZM26.3582 13.3443H28.2528C28.7073 13.3443 29.0379 13.6998 29.0379 14.0422C29.0379 14.4827 28.6095 14.7401 28.2773 14.7401H26.3582V13.3443V13.3443Z"
+                        fill="white" />
+                      <path d="M33.0776 18.4897H31.3853V11.8599H33.0776V18.4897Z" fill="white" />
+                      <path
+                        d="M37.0902 18.4897H36.7249C34.9574 18.4897 33.8843 17.0973 33.8843 15.2021C33.8843 13.2601 34.9454 11.8599 37.1774 11.8599H39.0093V13.4301H37.1104C36.2044 13.4301 35.5636 14.1372 35.5636 15.2184C35.5636 16.5024 36.2963 17.0416 37.3519 17.0416H37.7881L37.0902 18.4897Z"
+                        fill="white" />
+                      <path
+                        d="M40.6982 11.8613L37.8467 18.4911H39.7031L40.2293 17.1635H43.2879L43.8113 18.4911H45.7087L42.8599 11.8613H40.6982ZM41.7531 13.4043L42.6855 15.7242H40.8181L41.7531 13.4043Z"
+                        fill="white" />
+                      <path
+                        d="M45.9004 18.4897V11.8599H48.0077L50.6983 16.0253V11.8599H52.3558V18.4897H50.3167L47.5579 14.2152V18.4897H45.9004Z"
+                        fill="white" />
+                      <path
+                        d="M12.9258 30.0913V23.4614H18.3344V24.9444H14.6007V26.0785H18.2471V27.4742H14.6007V28.6519H18.3344V30.0913H12.9258Z"
+                        fill="white" />
+                      <path
+                        d="M39.4263 30.0913V23.4614H44.8349V24.9444H41.1012V26.0785H44.7302V27.4742H41.1012V28.6519H44.8349V30.0913H39.4263Z"
+                        fill="white" />
+                      <path
+                        d="M18.5446 30.0912L21.178 26.8172L18.4819 23.4614H20.5701L22.1758 25.536L23.7869 23.4614H25.7933L23.1326 26.7763L25.7709 30.0912H23.683L22.124 28.0494L20.6028 30.0912H18.5446Z"
+                        fill="white" />
+                      <path
+                        d="M25.9663 23.4624V30.0923H27.6674V27.9986H29.4121C30.8884 27.9986 32.0073 27.2154 32.0073 25.6924C32.0073 24.4306 31.1297 23.4624 29.6275 23.4624H25.9663V23.4624ZM27.6674 24.9618H29.5048C29.9817 24.9618 30.3226 25.2541 30.3226 25.7251C30.3226 26.1675 29.9834 26.4884 29.4993 26.4884H27.6674V24.9618Z"
+                        fill="white" />
+                      <path
+                        d="M32.7275 23.4614V30.0913H34.385V27.736H35.0829L37.0702 30.0913H39.0957L36.9148 27.6487C37.8099 27.5732 38.7331 26.805 38.7331 25.6123C38.7331 24.2172 37.6381 23.4614 36.416 23.4614H32.7275V23.4614ZM34.385 24.9444H36.2796C36.7341 24.9444 37.0648 25.2999 37.0648 25.6423C37.0648 26.0828 36.6364 26.3402 36.3042 26.3402H34.385V24.9444V24.9444Z"
+                        fill="white" />
+                      <path
+                        d="M45.604 30.0913V28.6519H48.9211C49.4119 28.6519 49.6245 28.3867 49.6245 28.0958C49.6245 27.8171 49.4126 27.5353 48.9211 27.5353H47.4222C46.1192 27.5353 45.3936 26.7415 45.3936 25.5496C45.3936 24.4866 46.0581 23.4614 47.9943 23.4614H51.222L50.5241 24.9531H47.7326C47.1989 24.9531 47.0347 25.2332 47.0347 25.5006C47.0347 25.7754 47.2377 26.0785 47.6453 26.0785H49.2155C50.668 26.0785 51.2983 26.9024 51.2983 27.9813C51.2983 29.1413 50.596 30.0913 49.1365 30.0913H45.604Z"
+                        fill="white" />
+                      <path
+                        d="M51.686 30.0913V28.6519H55.0032C55.494 28.6519 55.7065 28.3867 55.7065 28.0958C55.7065 27.8171 55.4946 27.5353 55.0032 27.5353H53.5042C52.2012 27.5353 51.4756 26.7415 51.4756 25.5496C51.4756 24.4866 52.1401 23.4614 54.0763 23.4614H57.2381L56.6061 24.9531H53.8146C53.281 24.9531 53.1167 25.2332 53.1167 25.5006C53.1167 25.7754 53.3197 26.0785 53.7273 26.0785H55.2976C56.7501 26.0785 57.3803 26.9024 57.3803 27.9813C57.3803 29.1413 56.678 30.0913 55.2185 30.0913H51.686Z"
+                        fill="white" />
+                    </g>
+                  </g>
+                  <rect x="0.44174" y="1.30111" width="57.0854" height="39.3925" rx="5.22613" stroke="#E0E0E0"
+                    stroke-width="0.80402" />
+                  <defs>
+                    <clipPath id="clip0_316_167">
+                      <rect x="0.84375" y="1.70312" width="56.2814" height="38.5885" rx="4.82412" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12">
+        <div class="w-100">
+          <!-- aca va el input de mensaje -->
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+              style="height: 100px"></textarea>
+            <label for="floatingTextarea2" class="text-secondary">Ingresar comentario</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- acciones del formulario -->
+
+    <div class="row no-gutters">
+      <div class="col-12">
+        <div class="w-100 d-flex justify-content-end">
+          <!-- aca van las acciones -->
+          <button class="btn btn-outline-danger me-2" type="button">
+            Cancelar
+          </button>
+          <button class="btn btn-primary" type="button">Pagar</button>
+        </div>
       </div>
     </div>
   </div>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"

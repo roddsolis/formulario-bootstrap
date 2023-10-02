@@ -1,15 +1,26 @@
 *{
     text-rendering: geometricPrecision;
     shape-rendering:geometricPrecision;
+    box-sizing: border-box;
 }
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+   
 }
 
-.card{
-    scale: 85%;
+#card{
+    scale: 80%;
+}
+
+div[class*="col"]{
+    /* border: 1px solid rgb(224, 224, 224); */
+    padding-bottom: 1.5em;
+     
+}
+
+div[class*="w-100"]{
+    /* padding: 0.5em; */
 }
