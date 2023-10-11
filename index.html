@@ -18,7 +18,7 @@
 
     <div class="container bg-white p-5 rounded-4 shadow-sm">
       <!-- fila titulo -->
-  
+
       <div class="row no-gutters">
         <div class="col-12">
           <div class="w-100">
@@ -27,9 +27,9 @@
           </div>
         </div>
       </div>
-  
+
       <!-- fila 2 warning -->
-  
+
       <div class="row no-gutters">
         <div class="col-12">
           <div class="w-100">
@@ -40,15 +40,15 @@
           </div>
         </div>
       </div>
-  
+
       <!-- inputs 2 columnas -->
-  
+
       <div class="row no-gutters">
         <div class="col-xl-6 col-lg-6 col-md-12">
           <div class="w-100">
             <!-- aca va el input nombre -->
             <div class="form-floating mb-0">
-              <input type="text" class="form-control"  placeholder="nombres" id="names" name="name" value=""/>
+              <input type="text" class="form-control" placeholder="nombres" id="names" name="name" value="" />
               <label for="floatingInput">Nombres</label>
             </div>
           </div>
@@ -57,21 +57,22 @@
           <div class="w-100">
             <!-- aca va el input apellido -->
             <div class="form-floating mb-0">
-              <input type="text" class="form-control"  placeholder="apellidos" id="lastNames" name="lastName" value="" />
+              <input type="text" class="form-control" placeholder="apellidos" id="lastNames" name="lastName" value="" />
               <label for="floatingInput">Apellidos</label>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- inputs 3 columnas -->
-  
+
       <div class="row no-gutters">
         <div class="col-xl-4 col-lg-4 col-md-12">
           <div class="w-100">
             <!-- aca va el input numero de tarjeta -->
             <div class="form-floating mb-0">
-              <input type="number" class="form-control" placeholder="numero de tarjeta"  id="cardNumber" name="cardNumber" value=""/>
+              <input type="number" class="form-control" placeholder="numero de tarjeta" id="cardNumber"
+                name="cardNumber" value="" />
               <label for="floatingInput">Número de tarjeta</label>
             </div>
           </div>
@@ -80,7 +81,7 @@
           <div class="w-100">
             <!-- aca va el input CVC -->
             <div class="form-floating mb-0">
-              <input type="password" class="form-control" placeholder="cvv" id="cvv" name="cvv" value=""/>
+              <input type="password" class="form-control" placeholder="cvv" id="cvv" name="cvv" value="" />
               <label for="floatingInput">CVV</label>
             </div>
           </div>
@@ -89,21 +90,22 @@
           <div class="w-100">
             <!-- aca va el input monto -->
             <div class="form-floating mb-0">
-              <input type="number" class="form-control" placeholder="Monto" id="amount" name="amount" value=""/>
+              <input type="number" class="form-control" placeholder="Monto" id="amount" name="amount" value="" />
               <label for="floatingInput">Monto</label>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- inputs 3 columnas -->
-  
+
       <div class="row no-gutters">
         <div class="col-xl-4 col-lg-4 col-md-12">
           <div class="w-100">
             <!-- aca va el input cuidad -->
             <div class="form-floating">
-              <select class="form-select" aria-label="Floating label select example" id="selectCity" name="selectCity" value="">
+              <select class="form-select" aria-label="Floating label select example" id="selectCity" name="selectCity"
+                value="">
                 <option selected value="">Seleccionar</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
@@ -117,7 +119,8 @@
           <div class="w-100">
             <!-- aca va el input comuna-->
             <div class="form-floating">
-              <select class="form-select" aria-label="Floating label select example" id="selectComuna" name="selectComuna" value="">
+              <select class="form-select" aria-label="Floating label select example" id="selectComuna"
+                name="selectComuna" value="">
                 <option selected value="">Seleccionar</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
@@ -131,23 +134,25 @@
           <div class="w-100">
             <!-- aca va el input codigo postal -->
             <div class="form-floating mb-0">
-              <input type="number" class="form-control" placeholder="Nombres" id="postalCode" name="postalCode" value=""/>
+              <input type="number" class="form-control" placeholder="Nombres" id="postalCode" name="postalCode"
+                value="" />
               <label for="floatingInput">Código postal</label>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- inputs 2 columnas -->
-  
-      <div class="row no-gutters">
-        <div class="col-xl-6 col-lg-6 col-md-12 d-flex flex-column">
-          <div class="d-flex flex-column align-items-center h-100 border border-1 border-gray rounded-2 p-3 bg-success">
-            <p class="mb-2 lh-1 text-secondary w-100">Selecciona un tipo de tarjeta</p>
-            <div class="bg-dark p-5 w-100 d-flex justify-content-between">
-              <!-- aca va la tarjeta 1 y el checkbox 1 -->
-              <div class="form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radioVisa" value="1"/>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-12">
+
+          <div class="cardSelection flex-column justify-content-center border border-1 border-gray rounded-2 p-4">
+            <p class="lh-1 text-secondary pb-2">Selecciona un tipo de tarjeta</p>
+            <div class="d-flex justify-content-between">
+
+              <div class="d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radioVisa" value="1" />
                 <label class="form-check-label" for="exampleRadios1">
                   <!-- aca va la tarjeta 1 -->
                   <svg id="Visa" width="59" height="42" viewBox="0 0 59 42" fill="none">
@@ -177,9 +182,9 @@
                   </svg>
                 </label>
               </div>
-              <!-- aca va la tarjeta 2 y el checkbox 2 -->
-              <div class="form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radioMastercard" value="2"/>
+
+              <div class="d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radioMastercard" value="2" />
                 <label class="form-check-label" for="exampleRadios1">
                   <!-- aca va la tarjeta 2 -->
                   <svg id="MasterCard" width="59" height="42" viewBox="0 0 59 42" fill="none">
@@ -205,9 +210,9 @@
                   </svg>
                 </label>
               </div>
-              <!-- aca va la tarjeta 3 y el checkbox 3 -->
-              <div class="form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radioDiners" value="3"/>
+
+              <div class="d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radioDiners" value="3" />
                 <label class="form-check-label" for="exampleRadios1">
                   <!-- aca va la tarjeta 3 -->
                   <svg id="Diners" width="59" height="42" viewBox="0 0 59 42" fill="none">
@@ -236,15 +241,15 @@
                   </svg>
                 </label>
               </div>
-              <!-- aca va la tarjeta 4 y el checkbox 4 -->
-              <div class="form-check d-flex flex-column align-items-center justify-content-center // d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-center // d-lg-flex flex-lg-row align-items-lg-center justify-content-lg-center // d-md-flex flex-md-row align-items-md-center justify-content-md-center // d-sm-flex flex-sm-column align-items-sm-center justify-content-sm-center pb-0 ps-0">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="radioAmericanExpress" value="4"/>
-                <label class="form-check-label" for="exampleRadios1"> 
+
+              <div class="d-flex align-items-center gap-3">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radioAmericanExpress" value="4" />
+                <label class="form-check-label" for="exampleRadios1">
                   <!-- aca va la tarjeta 4 -->
                   <svg id="americanExpress" width="58" height="42" viewBox="0 0 58 42" fill="none">
                     <g clip-path="url(#clip0_316_167)">
-                      <mask id="mask0_316_167" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="58"
-                        height="40">
+                      <mask id="mask0_316_167" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="1"
+                        width="58" height="40">
                         <rect x="0.84375" y="1.70312" width="56.2814" height="38.5885" fill="#016FD0" />
                       </mask>
                       <g mask="url(#mask0_316_167)">
@@ -312,24 +317,22 @@
               </div>
             </div>
           </div>
+
+
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-12">
-          <div class="w-100">
-            <!-- aca va el input de mensaje -->
-            <div class="form-floating">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                style="height: 100px"></textarea>
-              <label for="floatingTextarea2" class="text-secondary">Ingresar comentario</label>
-            </div>
-          </div>
+
+        <div class="form-floating col-lg-6 col-md-12">
+          <textarea class="form-control h-100" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+          <label class="ps-4 pt-2" for="floatingTextarea2 " class="text-secondary">Ingresar comentario</label>
         </div>
+
       </div>
-  
+
       <!-- acciones del formulario -->
-  
+
       <div class="row no-gutters">
-        <div class="col-12">
-          <div class="w-100 d-flex justify-content-end">
+        <div class="col-12 ">
+          <div class="d-flex justify-content-end">
             <!-- aca van las acciones -->
             <button class="btn btn-outline-danger me-2" type="button">
               Cancelar
@@ -338,6 +341,7 @@
           </div>
         </div>
       </div>
+
     </div>
 
   </form>
