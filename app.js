@@ -5,7 +5,7 @@ let payForm = document.getElementById('payForm')
 payForm.addEventListener('submit', (e)=>{
 
     /* Expresiones Regulares */
-    let regexPass = /^[A-Za-z]{6,20}$/
+    // let regexPass = /^[A-Za-z]{6,20}$/
 
     /* let isEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
     let onlyGmail = /^[a-zA-Z0-9._-]+@gmail.com$/
@@ -15,6 +15,7 @@ payForm.addEventListener('submit', (e)=>{
 
     e.preventDefault()        
     let feedbackMessage = document.getElementsByClassName('alert')
+    let cardSelection = document.getElementsByClassName('cardSelection')
     
     let {names, lastNames , cardNumber, amount, selectCity , selectComuna , postalCode } = e.target
 
@@ -29,15 +30,16 @@ payForm.addEventListener('submit', (e)=>{
         selectCity.classList.add('is-invalid')
         selectComuna.classList.add('is-invalid')
         postalCode.classList.add('is-invalid')
-        console.log(feedbackMessage);
         feedbackMessage[0].classList.add('alert-danger')
-
+        cardSelection[0].classList.add('border-danger')
+        
+        
+    
     }
 
     /* hacer una condicion que  */
 
     
-    console.log(e.target.classList);
 
 
 
