@@ -1,79 +1,94 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let payForm = document.querySelector("#payForm");
 
-// let payButton = document.querySelector('#payButton').addEventListener('click',(e)=>e.preventDefault());
-let payForm = document.getElementById('payForm')
+  // Función para desactivar estilos rojos
+  function resetErrorStyles() {
+    let feedbackMessage = document.querySelector(".alert");
+    let cardSelection = document.querySelector(".cardSelection");
+    let inputs = payForm.elements;
 
-payForm.addEventListener('submit', (e)=>{
+    Array.from(inputs).forEach((element) => {
+      element.classList.remove("is-invalid");
+    });
 
-    /* Expresiones Regulares */
-    // let regexPass = /^[A-Za-z]{6,20}$/
+    feedbackMessage.classList.remove("alert-danger");
+    cardSelection.classList.remove("border-danger");
+  }
 
-    /* let isEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-    let onlyGmail = /^[a-zA-Z0-9._-]+@gmail.com$/
-    let onlyHotmail = /^[a-zA-Z0-9._-]+@hotmail.com$/
+  // Desactivar estilos rojos al enfocar un campo de entrada
+  Array.from(payForm.elements).forEach((element) => {
+    element.addEventListener("focus", resetErrorStyles);
+  });
 
-    let isACreditCard = /^[0-9]{4}\-[0-9]{4}\-[0-9]{4}\-[0-9]{4}$/*/
+  payForm?.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    e.preventDefault()        
-    let feedbackMessage = document.getElementsByClassName('alert')
-    let cardSelection = document.getElementsByClassName('cardSelection')
-    
-    let {names, lastNames , cardNumber, amount, selectCity , selectComuna , postalCode } = e.target
+    let feedbackMessage = document.querySelector(".alert");
+    let cardSelection = document.querySelector(".cardSelection");
+    let inputs = e.target.elements;
 
-    if(names.value === '' && lastNames.value === '' && cardNumber.value === '' && cvv.value === '' && amount.value === '' && selectCity.value === '' && selectComuna.value === '' && postalCode.value === ''){
+    // 1. No dejar enviar el formulario si no están todos los campos llenos
+    let emptyFields = Array.from(inputs).filter((element) => {
+      return (element.type !== "submit" && element.value.trim() === "") || (element.type === "radio" && !element.checked);
+    });
 
-        names.classList.add('is-invalid')
-        lastNames.classList.add('is-invalid')
-        cardNumber.classList.add('is-invalid')
-        cvv.classList.add('is-invalid')
-        cvv.classList.add('is-invalid')
-        amount.classList.add('is-invalid')
-        selectCity.classList.add('is-invalid')
-        selectComuna.classList.add('is-invalid')
-        postalCode.classList.add('is-invalid')
-        feedbackMessage[0].classList.add('alert-danger')
-        cardSelection[0].classList.add('border-danger')
-        
-        
-    
+    if (emptyFields.length > 0) {
+      emptyFields.forEach((element) => {
+        element.classList.add("is-invalid");
+      });
+
+      feedbackMessage.classList.add("alert-danger");
+      cardSelection.classList.add("border-danger");
+
+      return;
     }
 
-    /* hacer una condicion que  */
+    // 2. Validar el campo de correo electrónico para que sea un correo válido
+    let emailInput = inputs["email"];
+    let isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
 
-    
+    if (!isEmailValid) {
+      emailInput.classList.add("is-invalid");
+      feedbackMessage.classList.add("alert-danger");
+      cardSelection.classList.add("border-danger");
+      return;
+    }
 
+    // 3. Validar el campo de nombres y apellidos para que acepten solo letras
+    let nameInput = inputs["name"];
+    let lastNameInput = inputs["lastName"];
+    let isNameValid = /^[a-zA-Z\s]+$/.test(nameInput.value);
+    let isLastNameValid = /^[a-zA-Z\s]+$/.test(lastNameInput.value);
 
+    if (!isNameValid || !isLastNameValid) {
+      if (!isNameValid) {
+        nameInput.classList.add("is-invalid");
+      }
+      if (!isLastNameValid) {
+        lastNameInput.classList.add("is-invalid");
+      }
 
+      feedbackMessage.classList.add("alert-danger");
+      cardSelection.classList.add("border-danger");
 
-       
-})
+      return;
+    }
 
+    // Restablecer estilos en caso de éxito
+    resetErrorStyles();
 
+    // Resto de la lógica de envío del formulario
+  });
 
+  // Desactivar estilos rojos al cambiar la selección de un radio button
+  payForm.addEventListener("change", function (e) {
+    if (e.target.type === "radio") {
+      let radioButtons = Array.from(payForm.querySelectorAll('input[name="exampleRadios"]'));
+      let isAnyRadioButtonChecked = radioButtons.some((radio) => radio.checked);
 
-// aca voy a obtener todo los campos de formulario
-// https://www.html5pattern.com/ aca puedo obtener tipod de validadores para inputs
-
-/* let inputNames = document.getElementById('names');
-let inputLastNames = document.getElementById('lastNames');
-let inputCardNumber = document.getElementById('cardNumber');
-let inputSecretNumber = document.getElementById('');
-let inputAmount = document.getElementById('');
-let selectCity = document.getElementById('');
-let selectComuna = document.getElementById('');
-let selectPostalCode = document.getElementById('');
-let selectComment = document.getElementById('');
-
-console.log(typeof(inputNames.value));
-console.log(typeof(inputLastNames.value));
-console.log(typeof(inputCardNumber.value)); */
-
-
-
-/* payButton.addEventListener('click',(e)=>{
-    e.preventDefault()
-})
- */
-
-
-
-
+      if (isAnyRadioButtonChecked) {
+        resetErrorStyles();
+      }
+    }
+  });
+});
